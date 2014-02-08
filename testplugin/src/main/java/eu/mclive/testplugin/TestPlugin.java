@@ -13,6 +13,7 @@ public void onDisable() {
 	System.out.println("Plugin erfolgreich deaktiviert!");
 	System.out.println("Test");
 	System.out.println("Test2! :D");
+	System.out.println("Test3");
 }
 	
 }
