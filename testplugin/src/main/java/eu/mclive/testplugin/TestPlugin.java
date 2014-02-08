@@ -11,7 +11,6 @@ public void onEnable() {
 @Override
 public void onDisable() {
 	System.out.println("Plugin erfolgreich deaktiviert!");
-	System.out.println("Test!");
 
 }
 	
