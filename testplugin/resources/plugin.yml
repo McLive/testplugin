@@ -1,6 +1,6 @@
-name: Testplugin
+name: TestPlugin
 version: 0.1
 description: Testplugin zum probieren mit java-code
 website: http://mclive.eu/
 author: McLive
-main: eu.mclive.testplugin.Testplugin
+main: eu.mclive.testplugin.TestPlugin
