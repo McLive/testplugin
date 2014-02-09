@@ -23,6 +23,7 @@ public void onDisable() {
 	System.out.println("Test10");
 	System.out.println("Test11");
 	System.out.println("Test12");
+	System.out.println("Test13");
 }
 	
 }
