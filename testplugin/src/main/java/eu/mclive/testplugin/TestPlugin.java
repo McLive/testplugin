@@ -33,7 +33,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 			return true;
 		}
 		if (args.length>0) {
-			return false; 
+			return false;
 		}
 	}
 	
