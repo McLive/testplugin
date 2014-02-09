@@ -1,4 +1,4 @@
 testplugin
 ==========
 
-Testpluign
+Testplugin
