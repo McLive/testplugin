@@ -24,7 +24,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 	if (cmd.getName().equalsIgnoreCase("heile")) {
 		if (args.length == 0) {
 			if (!(sender instanceof Player)) {
-				System.out.println("Dieser Befehl ist nur für Spieler!");
+				System.out.println("Dieser Befehl ist nur für Spieler.");
 				return true;
 			}
 			Player player = (Player) sender;
