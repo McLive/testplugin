@@ -4,3 +4,9 @@ description: Testplugin zum probieren mit java-code
 website: http://mclive.eu/
 author: McLive
 main: eu.mclive.testplugin.TestPlugin
+
+commands:
+  heile:
+    description: Heilt den Spieler
+    usage: /heile
+    permission: testplugin.heile
