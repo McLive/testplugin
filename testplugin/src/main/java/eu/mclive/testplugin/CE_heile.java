@@ -44,8 +44,22 @@ public class CE_heile implements CommandExecutor{
 			}
 		}
 		
+		if (cmd.getName().equalsIgnoreCase("helptest")) {
+			if (args.length >0) {
+				if (!(sender instanceof Player)) {
+					System.out.println("Dieser Befehl ist nur für Spieler.");
+					return true;
+				}
+				Player player = (Player) sender;
+				player.sendMessage(ChatColor.GREEN + "Test");
+				sendChatPacket((Player) sender, "{text:\"CLICK\",clickEvent:{action:run_command,value:\"This is a test\"}}");
+				return true;
+			}
+		}	
+
 		return false;
 		
 	}
 	
 }
+

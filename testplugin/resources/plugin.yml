@@ -10,3 +10,15 @@ commands:
     description: Heilt den Spieler
     usage: /heile
     permission: testplugin.heile
+  helptest:
+    description: Hilfeseite
+    usage: /heile
+    permission: testplugin.heile
+  haus:
+    description: Haus setzen
+    usage: /haus
+    permission: testplugin.haus
+  haustp:
+    description: Nach Hause teleportieren
+    usage: /haustp
+    permission: testplugin.haustp
