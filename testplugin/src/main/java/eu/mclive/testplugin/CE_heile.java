@@ -52,7 +52,6 @@ public class CE_heile implements CommandExecutor{
 				}
 				Player player = (Player) sender;
 				player.sendMessage(ChatColor.GREEN + "Test");
-				sendChatPacket((Player) sender, "{text:\"CLICK\",clickEvent:{action:run_command,value:\"This is a test\"}}");
 				return true;
 			}
 		}	

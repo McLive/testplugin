@@ -5,15 +5,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.commons.lang.Validate;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.block.Hopper;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.inventory.InventoryMoveItemEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.inventory.InventoryHolder;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class TestPlugin extends JavaPlugin implements Listener {
@@ -51,6 +58,45 @@ public void onAttack(EntityDamageByEntityEvent event) {
 		}
 	}
 }
+
+@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled=true)
+public void onInventoryMoveItemEvent(InventoryMoveItemEvent event) {
+    //Get destination container
+    InventoryHolder destHolder = event.getDestination().getHolder();
+    
+    //since we only care about hoppers, then ignore everything else
+    if (destHolder instanceof Hopper) {
+    	System.out.println("Hello, my name is onInventoryMoveItemEvent!");
+        //Get the location of the hopper in question.
+        Block hopperBlock = ((Hopper) destHolder).getBlock();
+        System.out.print("Inventory moved to: " + event.getDestination());
+        System.out.print("Item: " + event.getItem());
+        System.out.print("Source inventory: " + event.getSource());
+        //Get the cache, if any, for the hopper location.
+        //String cache = TestPlugin.knownHoppersCache_Get(hopperBlock);
+
+        //get the itemStack that was moved and convert it to a String for comparison
+        //String eventItemInformation = TestPlugin.GetItemInformationForInventory(event.getItem(), false);
+        ItemStack eventItemInformation = event.getItem();            
+        //debug if requested
+                
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 @EventHandler
 public void onPlayerMove(PlayerMoveEvent Event) {
